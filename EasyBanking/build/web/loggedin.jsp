@@ -13,6 +13,7 @@
         <title>Registrado como:</title>
     </head>
     <body>
+        
         <% Date d= new Date(); %>
         
         <h1>Bienvenido!,<br> <%= request.getParameter("userName") %>!</h1>
