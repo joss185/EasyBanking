@@ -18,7 +18,7 @@ public class Bank {
     private String country;
     private int phone;
     private ArrayList<Person> listOfPersons = new ArrayList<>();
-    
+
     public Bank() {
     }
 
@@ -60,24 +60,22 @@ public class Bank {
     public void setPhone(int phone) {
         this.phone = phone;
     }
-    
+
     public ArrayList<Person> getListOfPersons() {
         return listOfPersons;
     }
 
-  
     public void setListOfPersons(ArrayList<Person> listOfPersons) {
         this.listOfPersons = listOfPersons;
     }
 
-   public void addPersons(Person p) {
-         this.listOfPersons.add(p);
+    public void addPersons(Person p) {
+        this.listOfPersons.add(p);
     }
 
-    
     public Person personValidation(String id, String password) {
 
-        for (Person p: this.listOfPersons) {
+        for (Person p : this.listOfPersons) {
 
             if (p.getId().equals(id)) {
 
@@ -85,6 +83,21 @@ public class Bank {
 
                     return p;
                 }
+            }
+
+        }
+
+        return null;
+    }
+
+    public Person personValidationbyId(String id) {
+
+        for (Person p : this.listOfPersons) {
+
+            if (p.getId().equals(id)) {
+                
+                return p;
+
             }
 
         }

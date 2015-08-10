@@ -9,6 +9,7 @@ import com.easybanking.banking.Bank;
 import com.easybanking.banking.Person;
 import com.easybanking.banking.User;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Calendar;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -19,7 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Soler
  */
-public class Login extends HttpServlet {
+public class UserData extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -30,44 +31,34 @@ public class Login extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    String paramId;
-    String paramPass;
     
+    Login login = new Login();
+    Bank bank = new Bank(1, "BAC", "Costa Rica", 800800800);
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
-        paramId = request.getParameter("id");
-        paramPass = request.getParameter("password");
-        UserData ud = new UserData();
+        String searchedPerson = request.getParameter("search");
+
+        Person searched = bank.personValidationbyId(searchedPerson);
         
-        Person p = new User("123", "Carlos", "123", "qwdqwd", Calendar.getInstance(), 123, 200, "TARDE");
-        Person p2 = new Person("1234", "Luis", "123", "qwdqwd", Calendar.getInstance(), 123);
-        ud.bank.getListOfPersons().add(p);
-        ud.bank.getListOfPersons().add(p2);
-        
-        Person userDataFound = ud.bank.personValidation(paramId, paramPass);
-
-        if (userDataFound instanceof User) {
-
-            if (userDataFound != null) {
-
-                response.sendRedirect("loggedin.jsp?userName=" + userDataFound.getName());
-
-            } else {
-
-                response.sendRedirect("error.jsp");
-            }
-
-        } else {
-
-            response.sendRedirect("index.jsp");
-
-        }
+        response.sendRedirect("loggedin.jsp?report=" + searched);
+                
+//        if (userDataFound != null) {
+//
+//            response.sendRedirect("loggedin.jsp?userName=" + userDataFound.getName());
+//
+//        } else {
+//
+//            response.sendRedirect("error.jsp");
+//        }
+//
+//        String searchedUser = request.getParameter("search");
 
     }
 
-    // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
+// <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
      *

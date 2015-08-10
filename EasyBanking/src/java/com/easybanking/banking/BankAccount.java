@@ -13,11 +13,12 @@ import java.util.Calendar;
  * @author Soler
  */
 public class BankAccount {
- 
+
     private int id;
     private int currency;
     private double amount;
-    private ArrayList<Transaction> listOfTransactions = new ArrayList<>();;
+    private ArrayList<Transaction> listOfTransactions = new ArrayList<>();
+    ;
     private Calendar registeredDate;
     private Calendar expirationDate;
 
@@ -25,7 +26,7 @@ public class BankAccount {
     }
 
     public BankAccount(int id, int currency, int amount, Calendar registeredDate, Calendar expirationDate) {
-        
+
         this.id = id;
         this.currency = currency;
         this.amount = amount;
@@ -83,9 +84,9 @@ public class BankAccount {
 
     @Override
     public String toString() {
-        return "BankAccount{" + "id=" + id +  ", currency=" + currency + ", amount=" + amount + ", listOfTransactions=" + listOfTransactions + ", registeredDate=" + registeredDate + ", expirationDate=" + expirationDate + '}';
+
+        return "Cuenta: " + id + ", Moneda:" + currency + ", Total: " + amount + ", listOfTransactions=" + listOfTransactions + ", registeredDate=" + registeredDate + ", expirationDate=" + expirationDate + '}';
+
     }
-    
-    
-    
+
 }

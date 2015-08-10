@@ -5,6 +5,8 @@
  */
 package com.easybanking.banking;
 
+import java.text.DecimalFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 
@@ -13,14 +15,16 @@ import java.util.Calendar;
  * @author Soler
  */
 public class Person {
-    
+
     private String id;
     private String name;
     private String password;
     private String direction;
     private Calendar birthDate;
     private int phone;
-    private ArrayList<BankAccount> listOfBankAccounts = new ArrayList<>();;
+    private ArrayList<BankAccount> listOfBankAccounts = new ArrayList<>();
+
+    ;
 
     public Person() {
     }
@@ -32,7 +36,7 @@ public class Person {
         this.direction = direction;
         this.birthDate = birthDate;
         this.phone = phone;
-        
+
     }
 
     public String getId() {
@@ -82,8 +86,8 @@ public class Person {
     public void setPhone(int phone) {
         this.phone = phone;
     }
-    
-     public ArrayList<BankAccount> getlistOfBankAccounts() {
+
+    public ArrayList<BankAccount> getlistOfBankAccounts() {
         return listOfBankAccounts;
     }
 
@@ -91,9 +95,53 @@ public class Person {
         this.listOfBankAccounts = listOfBankAccounts;
     }
 
+    public String getResponsible(Person p) {
+
+        String responsible = "";
+
+        if (p instanceof Legal) {
+
+            responsible = ((Legal) p).getResponsible();
+
+        } else {
+
+            responsible = "-----";
+        }
+
+        return responsible;
+    }
+
+    public String printAccounts() {
+
+        String returnable = "";
+
+        for (BankAccount i : listOfBankAccounts) {
+            returnable += i.toString();
+
+        }
+
+        return returnable;
+    }
+
     @Override
     public String toString() {
-        return "Person{" + "id=" + id + ", name=" + name + ", password=" + password + ", direction=" + direction + ", birthDate=" + birthDate + ", phone=" + phone + ", listOfBankAccounts=" + listOfBankAccounts + '}';
+
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMM dd");
+
+        StringBuffer sb = new StringBuffer();
+        
+        sb.append("EASY BANK! \n");
+        sb.append("Cedula: " + this.getId() + "\n");
+        sb.append("Nombre: " + this.getName() + "         Telefono: " + this.getPhone() + "\n");
+        sb.append("Dirección: " + this.getDirection() + "          Fecha Nacimiento: " + sdf.format(this.getBirthDate().getTime()) + "\n");
+        sb.append("Responsable: " + this.getResponsible(this) + "\n");
+        sb.append("------------------------------------------------------------------------ \n");
+        sb.append("-------------------------- Cuentas Bancarias --------------------------- \n");
+        sb.append("------------------------------------------------------------------------ \n");
+        sb.append(this.printAccounts());
+        sb.append("----------------------------------------------------------------------- \n");
+
+        return sb.toString();
     }
-    
+
 }
