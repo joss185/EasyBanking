@@ -48,8 +48,8 @@ public class CreatePerson extends HttpServlet {
        //corregir parametro de la 
        String param= "";
        
-       Person client = new Natural(paramId, paramName, paramPass,paramAddress,Calendar.getInstance(),paramPhone);
-        easyBank.getListOfPersons().add(client);
+       //Person client = new Natural(paramId, paramName, paramPass,paramAddress,Calendar.getInstance(),paramPhone);
+        //easyBank.getListOfPersons().add(client);
        response.getWriter();
         
         }

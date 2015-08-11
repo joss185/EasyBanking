@@ -44,13 +44,9 @@ public class UserData extends HttpServlet {
         HttpSession session = request.getSession(true);
         String searchedPerson = request.getParameter("search");
         //La logica para buscar el cliente y meter los resultados en la lista a retornar
-        ArrayList<Person> listofPerson = bank.getListOfPersons();
+        ArrayList<Person> listofPerson = bank.searchedPerson(searchedPerson);
         
-        for (Person p: listofPerson) {
-         
-            
-            
-        }
+       
         
         
         

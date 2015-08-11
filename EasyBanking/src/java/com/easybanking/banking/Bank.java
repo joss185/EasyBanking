@@ -91,27 +91,40 @@ public class Bank {
     }
 
     public Person personConfirmation(String id) {
-        
+
         for (Person p : this.listOfPersons) {
-            
+
             if (p.getId().equals(id)) {
-                
+
                 return p;
             }
         }
         return null;
     }
-    
-    public Person personConfirmationByName(String name) {
+
+    public ArrayList<Person> searchedPerson(String name) {
         
+        ArrayList<Person> searchList = new ArrayList<>();
+
         for (Person p : this.listOfPersons) {
-            
-            if (p.getName().toLowerCase().equals(name.toLowerCase())) {
-                
-                return p;
+
+            if (p.getId().toLowerCase().equals(name.toLowerCase())) {
+
+                if (p.getName().toLowerCase().equals(name.toLowerCase())) {
+
+                    if (p.getLastName().toLowerCase().equals(name.toLowerCase())) {
+
+                        if (p.getEmail().toLowerCase().equals(name.toLowerCase())) {
+
+                            searchList.add(p);
+
+                        }
+
+                    }
+                }
             }
         }
-        return null;
+        return searchList;
     }
 
     @Override
