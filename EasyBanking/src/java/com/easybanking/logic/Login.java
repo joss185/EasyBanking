@@ -41,8 +41,8 @@ public class Login extends HttpServlet {
         paramPass = request.getParameter("password");
         UserData ud = new UserData();
         
-        Person p = new User("123", "Carlos", "123", "qwdqwd", Calendar.getInstance(), "123", 200, "TARDE");
-        Person p2 = new Person("1234", "Luis", "123", "qwdqwd", Calendar.getInstance(), "123");
+        Person p = new User("123", "Carlos", "Asdrubal", "Pachano", "pachano@gmail.com" ,"213", "qwdqwd", Calendar.getInstance(), "123", 2500, "TARDE");
+        Person p2 = new Person("123", "Carlos", "Solis", "Pancho", "solispancho@gmail.com" ,"456", "qwdqwd", Calendar.getInstance(), "123");
         ud.bank.getListOfPersons().add(p);
         ud.bank.getListOfPersons().add(p2);
 

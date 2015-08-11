@@ -7,7 +7,7 @@ import java.util.Calendar;
  *
  * @author Glenn
  */
-public class Transaction {
+public class Transaction{
     
     
     private Calendar timeStamp;

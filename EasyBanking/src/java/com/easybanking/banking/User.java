@@ -19,17 +19,14 @@ public class User extends Person {
 
     public User() {
     }
-    
-    public User(Person Person, int salary, String workShift) {
+
+    public User(String id, String name, String lastName, String lastName2, String email, String password, String direction, Calendar birthDate, String phone, int salary, String workShift) {
+        super(id, name, lastName, lastName2, email, password, direction, birthDate, phone);
         this.salary = salary;
         this.workShift = workShift;
     }
 
-    public User(String id, String name, String password, String direction, Calendar birthDate, String phone, int salary, String workShift) {
-        super(id, name, password, direction, birthDate, phone);
-        this.salary = salary;
-        this.workShift = workShift;
-    }
+
 
     public int getSalary() {
         return salary;

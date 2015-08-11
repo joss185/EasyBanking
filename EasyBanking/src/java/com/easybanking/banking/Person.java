@@ -18,28 +18,32 @@ public class Person {
 
     private String id;
     private String name;
+    private String lastName;
+    private String lastName2;
+    private String email;
     private String password;
     private String direction;
     private Calendar birthDate;
-
     private String phone;
     private ArrayList<BankAccount> listOfBankAccounts = new ArrayList<>();;
 
-   
-
-
     public Person() {
+        
     }
 
-    public Person(String id, String name, String password, String direction, Calendar birthDate, String phone) {
+    public Person(String id, String name, String lastName, String lastName2, String email, String password, String direction, Calendar birthDate, String phone) {
         this.id = id;
         this.name = name;
+        this.lastName = lastName;
+        this.lastName2 = lastName2;
+        this.email = email;
         this.password = password;
         this.direction = direction;
         this.birthDate = birthDate;
         this.phone = phone;
-
     }
+
+
 
     public String getId() {
         return id;
@@ -101,7 +105,38 @@ public class Person {
          this.listOfBankAccounts.add(a);
     }
 
+    public String getLastName() {
+        return lastName;
+    }
 
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getLastName2() {
+        return lastName2;
+    }
+
+    public void setLastName2(String lastName2) {
+        this.lastName2 = lastName2;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public ArrayList<BankAccount> getListOfBankAccounts() {
+        return listOfBankAccounts;
+    }
+
+    public void setListOfBankAccounts(ArrayList<BankAccount> listOfBankAccounts) {
+        this.listOfBankAccounts = listOfBankAccounts;
+    }
+    
     public String getResponsible(Person p) {
 
         String responsible = "";

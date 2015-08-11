@@ -90,16 +90,29 @@ public class Bank {
         return null;
     }
 
-    public Person personConfirmation(String id){
-    for(Person p: this.listOfPersons){
-            if(p.getId().equals(id))
-           return p; 
+    public Person personConfirmation(String id) {
+        
+        for (Person p : this.listOfPersons) {
+            
+            if (p.getId().equals(id)) {
+                
+                return p;
+            }
         }
-    return null;
+        return null;
     }
-
-
-
+    
+    public Person personConfirmationByName(String name) {
+        
+        for (Person p : this.listOfPersons) {
+            
+            if (p.getName().toLowerCase().equals(name.toLowerCase())) {
+                
+                return p;
+            }
+        }
+        return null;
+    }
 
     @Override
     public String toString() {
