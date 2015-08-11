@@ -61,7 +61,7 @@ public class Credit extends BankAccount implements Interesable {
     }
     
     
-        public void amortizationToLoan(double paymentAmount) {
+       /* public void amortizationToLoan(double paymentAmount) {
             
             if (paymentAmount >= this.minimumMonthPayment && this.isHasPermissionToLoan() == true)) {
                 this.setLoanLastBalance(this.getLoanLastBalance() - paymentAmount);
@@ -83,8 +83,11 @@ public class Credit extends BankAccount implements Interesable {
             } else {
                 System.out.println("Exception");
             }
-            
+      }
+        
         }
+
+ */
 
     @Override
     public double getInterestRegularAccount() {

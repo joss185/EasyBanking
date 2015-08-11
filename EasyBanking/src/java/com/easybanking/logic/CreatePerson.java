@@ -6,6 +6,7 @@
 package com.easybanking.logic;
 
 import com.easybanking.banking.Bank;
+import com.easybanking.banking.Legal;
 import com.easybanking.banking.Natural;
 import com.easybanking.banking.Person;
 import java.io.IOException;
@@ -38,18 +39,29 @@ public class CreatePerson extends HttpServlet {
             response.setContentType("text/html;charset=UTF-8");
         String paramId = request.getParameter("id");
         String paramName = request.getParameter("name");
+        String paramLastname= request.getParameter("Lastname");
+        String paramLastname02= request.getParameter("Lastname02");
+        String paramEmail= request.getParameter("email");
         //Investigar como recibir este parametro
         String paramBirtdate = request.getParameter("birthdate");
         String paramAddress = request.getParameter("address");
         String paramPhone = request.getParameter("phone");
         String paramPass = request.getParameter("password");
+        String paramResposable = request.getParameter("responsable");
         
        Bank easyBank = new Bank(12345, "EasyBank", "Costa Rica", 2222222);
        //corregir parametro de la 
        String param= "";
-       
-       //Person client = new Natural(paramId, paramName, paramPass,paramAddress,Calendar.getInstance(),paramPhone);
-        //easyBank.getListOfPersons().add(client);
+      
+       Person client = new Person();
+       if (request.getParameter("clientType").equals("juridico")){
+       client = new Legal(paramId, paramName,paramLastname,paramLastname02,paramEmail, paramPass,paramAddress,Calendar.getInstance(),paramPhone,paramResposable);
+       }
+       if (request.getParameter("clientType").equals("fisico")){
+       client = new Natural(paramId, paramName,paramLastname,paramLastname02,paramEmail, paramPass,paramAddress,Calendar.getInstance(),paramPhone); 
+       }
+     
+        easyBank.getListOfPersons().add(client);
        response.getWriter();
         
         }

@@ -10,21 +10,29 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Nuevo cliente</title>
+        <h1>Nuevo cliente </h1>
         <form action="CreatePerson">
-             Cedula              :<input type="text" name="Id"/><br/>
-             Nombre              :<input type="text" name="Name"/><br/>
+             Cedula              :<input type="text" name="id"/><br/>
+             Nombre              :<input type="text" name="name"/><br/>
+             Primer apellido      :<input type="text" name="Lastname"/><br/>
+             Segundo apellido     :<input type="text" name="Lastname"/><br/>
+             E-mail              :<input type="text" name="email" value="@"/><br/>
              Contraseña          :<input type="text" name="password" /><br/>
-             Feacha de nacimiento:<input type="date" name="birthdate">
+             Feacha de nacimiento:<input type="text" name="birthdate" value="00/00/0000"><br/>
              Direccion           :<input type="text" name="address"/><br/>
-             Telefono          : <input type="text" name="phone"/>
+             Telefono          : <input type="text" name="phone" value="0000-00-00"/>
              <br/>
-             <h1>Seleccione el tipo de cliente </h1>
-             Tipo de cliente: <select name="clientType" size="2">
-                 <option>Jurídico</option>
-                 <option>Físico</option>
-             </select><br/>
+             
+             Tipo de cliente: <select name="clientType">
+                 <option value="juridico">Jurídico</option>
+                 <option value="fisico">Físico</option>
+             </select>
+             <br/>
          
-         <input type="submit" value="Add" name="newClient" />
+             Responsable          : <input type="text" name="responsable"/>
+             <br/>
+         <input type="submit" value="Agregar" name="newClient" />
+         
     </form>
     </head>
     <body>
