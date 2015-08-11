@@ -45,9 +45,12 @@ public class CreatePerons extends HttpServlet {
         String paramPass = request.getParameter("password");
         
        Bank easyBank = new Bank(12345, "EasyBank", "Costa Rica", 2222222);
-       //corregir parametro de la fecha
+       //corregir parametro de la 
+       String param= "";
+       
        Person client = new Natural(paramId, paramName, paramPass,paramAddress,Calendar.getInstance(),paramPhone);
-        easyBank.addPersons(client);
+        easyBank.getListOfPersons().add(client);
+       response.getWriter();
         
         }
     }

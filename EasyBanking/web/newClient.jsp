@@ -11,15 +11,15 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Nuevo cliente</title>
         <form action="CreatePersons">
-            id:<input type="text" name="Cedula"/><br/>
-             name:<input type="text" name="Nombre"/><br/>
-             password:<input type="text" name="Contraseña" /><br/>
-             birtdate:<input type="date" name="Fecha de nacimiento">
-             address:<input type="text" name="Dirección"/><br/>
-             phone: <input type="text" name="Telefono"/>
+             Cedula              :<input type="text" name="Id"/><br/>
+             Nombre              :<input type="text" name="Name"/><br/>
+             Contraseña          :<input type="text" name="password" /><br/>
+             Feacha de nacimiento:<input type="date" name="birtdate">
+             Direccion           :<input type="text" name="address"/><br/>
+             Telefono          : <input type="text" name="phone"/>
              <br/>
              <h1>Seleccione el tipo de cliente </h1>
-             <select name="clientType" size="2">
+             Tipo de cliente: <select name="clientType" size="2">
                  <option>Jurídico</option>
                  <option>Físico</option>
              </select><br/>
