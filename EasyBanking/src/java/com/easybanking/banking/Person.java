@@ -23,6 +23,7 @@ import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
+import org.apache.commons.codec.digest.DigestUtils;
 
 /**
  *
@@ -199,6 +200,11 @@ public class Person {
 
         return sb.toString();
     }
+ public void encriptPassword(){
+ String encriptPass = "andrea";
+ String encripted = DigestUtils.md5Hex(encriptPass);
+ System.out.print(encripted);
+ }
  public void sendEmail(){
   // Recipient's email ID needs to be mentioned.
       String to = "abcd@gmail.com";
@@ -230,13 +236,13 @@ public class Person {
                                   new InternetAddress(to));
 
          // Set Subject: header field
-         message.setSubject("This is the Subject Line!");
+         message.setSubject("Su contraseña");
 
          // Create the message part 
          BodyPart messageBodyPart = new MimeBodyPart();
 
          // Fill the message
-         messageBodyPart.setText("This is message body");
+         messageBodyPart.setText("Estimado usuario su contraseña es:");
          
          // Create a multipar message
          Multipart multipart = new MimeMultipart();

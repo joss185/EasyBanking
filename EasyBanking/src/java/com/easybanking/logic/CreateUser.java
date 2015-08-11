@@ -48,6 +48,7 @@ public class CreateUser extends HttpServlet {
         int paramSalary = Integer.parseInt(request.getParameter("salary"));
         String paramworkShift = request.getParameter("workShift");
         
+        
        Bank easyBank = new Bank(12345, "EasyBank", "Costa Rica", 2222222);
        //corregir parametro de la 
        String param= "";
@@ -56,7 +57,3 @@ public class CreateUser extends HttpServlet {
        easyBank.getListOfPersons().add(user);
         }
     }
-
- 
-
-
