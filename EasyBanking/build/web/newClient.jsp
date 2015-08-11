@@ -14,7 +14,7 @@
              Cedula              :<input type="text" name="Id"/><br/>
              Nombre              :<input type="text" name="Name"/><br/>
              Contraseña          :<input type="text" name="password" /><br/>
-             Feacha de nacimiento:<input type="date" name="birtdate">
+             Feacha de nacimiento:<input type="date" name="birthdate">
              Direccion           :<input type="text" name="address"/><br/>
              Telefono          : <input type="text" name="phone"/>
              <br/>

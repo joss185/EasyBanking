@@ -39,7 +39,7 @@ public class CreatePerson extends HttpServlet {
         String paramId = request.getParameter("id");
         String paramName = request.getParameter("name");
         //Investigar como recibir este parametro
-       Calendar paramBirtdate = Calendar.getInstance();
+        String paramBirtdate = request.getParameter("birthdate");
         String paramAddress = request.getParameter("address");
         String paramPhone = request.getParameter("phone");
         String paramPass = request.getParameter("password");

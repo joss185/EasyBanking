@@ -10,11 +10,13 @@ import com.easybanking.banking.Person;
 import com.easybanking.banking.User;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.Calendar;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -39,11 +41,23 @@ public class UserData extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
+        HttpSession session = request.getSession(true);
         String searchedPerson = request.getParameter("search");
-
-        Person searched = bank.personConfirmation(searchedPerson);
+        //La logica para buscar el cliente y meter los resultados en la lista a retornar
+        ArrayList<String> lst = new ArrayList<String>();
+        lst.add("Juan");
+        lst.add("Jorge");
+        lst.add("Jaime");
+        lst.add(searchedPerson);
         
-        response.sendRedirect("loggedin.jsp?report=" + searched);
+        
+        session.setAttribute("RESULT_CLIENT", lst);
+        response.sendRedirect("loggedin.jsp");
+        
+
+        //Person searched = bank.personConfirmation(searchedPerson);
+        
+        //response.sendRedirect("loggedin.jsp?report=" + searched);
                 
 //        if (userDataFound != null) {
 //

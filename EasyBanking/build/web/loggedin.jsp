@@ -4,34 +4,16 @@
     Author     : Soler
 --%>
 
+<%@page import="java.util.ArrayList"%>
 <%@page import="java.util.Date"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<<<<<<< HEAD
-        <title>Registrado como:</title>
-    </head>
-    <body>
-        
-        <% Date d= new Date(); %>
-        
-        <h1>Bienvenido!,<br> <%= request.getParameter("userName") %>!</h1>
-        <br>
-        Fecha de ingreso: <%=d %>
-        
-        <h1>Presione en la transaccion que desea realizar</h1>
-        <form action="newClient.jsp">
-            <input type="submit" value="Agregar cliente" name="newClient" />    
-        </form>
-        <form action="createAccount.jsp">
-            <input type="submit" value="Crear cuenta" name="createAccount" />
-        </form>
-    </body>
-</html>
-=======
+
         <title>EasyBanking!</title>
+
         <style type="text/css">
             #ebsearch{
                 background-color:#c3dfef;
@@ -80,24 +62,50 @@
                 clear:both;
             }
         </style>
-   </head>
-   <div id="ebsearch">
+    </head>
+    <body id="ebsearch">
 
-    <h1>Bienvenido,<br> <%= request.getParameter("userName")%>!</h1>
-    Fecha de ingreso: <%=d%>
-       
-   </div>
-<body>
+        <% Date d = new Date();%>
 
-   <div id="ebsearch">
-       <form id="ebnewsearch" method="get" action="UserData">
-                <input type="text" class="ebtextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="ebbutton">
-            </form>
-       <div class="ebclear"></div>
-            
+        <div id="ebsearch">
+
+            <h1>Bienvenido,<br> <%= request.getParameter("userName")%>!</h1>
+            Fecha de ingreso: <%=d%>
+
         </div>
-    
-    <div />
-</body>
+
+
+        <div id="ebsearch">
+            <form id="ebnewsearch" method="get" action="UserData">
+                <input type="text" class="ebtextinput" name="search" size="21" maxlength="120"><input type="submit" value="Buscar" class="ebbutton">
+            </form>
+            <div class="ebclear"></div>
+
+        </div>
+            <table border="1">
+<%
+     ArrayList<String> lst = (ArrayList<String>) session.getAttribute("RESULT_CLIENT");
+     if (lst != null) {
+     for (String str : lst) {
+%>
+    <tr>
+        <td><%=str%></td>
+        <td><%=str%></td>
+    </tr>        
+<%
+      }
+     }
+     session.removeAttribute("RESULT_CLIENT");
+%>
+</table>
+
+        <h1>Presione en la transaccion que desea realizar</h1>
+        <form action="newClient.jsp">
+            <input type="submit" value="Agregar cliente" name="newClient" />    
+        </form>
+        <form action="createAccount.jsp">
+            <input type="submit" value="Crear cuenta" name="createAccount" />
+        </form>
+    </body>
+
 </html>
->>>>>>> origin/master
