@@ -18,19 +18,17 @@ public class Deposit extends Transaction {
     }
 
     public void depositAmount(Person person, BankAccount bankAccount) {
-
         for (BankAccount b : person.getlistOfBankAccounts()) {
-
             if (b.equals(bankAccount)) {
-
                 double amount = b.getAmount();
-
                 double finalAmount = b.getAmount() + this.getAmountOfTransaction();
-
+                b.setAmountOfTransaction(finalAmount);
+            } else {
+                System.out.println("Exception")
             }
-
         }
-
+        
     }
+
 
 }
