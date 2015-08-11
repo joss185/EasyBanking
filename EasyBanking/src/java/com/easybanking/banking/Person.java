@@ -21,15 +21,12 @@ public class Person {
     private String password;
     private String direction;
     private Calendar birthDate;
-<<<<<<< HEAD
+
     private String phone;
     private ArrayList<BankAccount> listOfBankAccounts = new ArrayList<>();;
-=======
-    private int phone;
-    private ArrayList<BankAccount> listOfBankAccounts = new ArrayList<>();
 
-    ;
->>>>>>> origin/master
+   
+
 
     public Person() {
     }
@@ -99,11 +96,11 @@ public class Person {
     public void setListOfAccounts(ArrayList<BankAccount> listOfBankAccounts) {
         this.listOfBankAccounts = listOfBankAccounts;
     }
-<<<<<<< HEAD
+
     public void addAccount(BankAccount a) {
          this.listOfBankAccounts.add(a);
     }
-=======
+
 
     public String getResponsible(Person p) {
 
@@ -133,8 +130,7 @@ public class Person {
         return returnable;
     }
 
->>>>>>> origin/master
-    @Override
+
     public String toString() {
 
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy MMM dd");

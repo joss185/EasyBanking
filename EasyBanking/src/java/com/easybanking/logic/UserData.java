@@ -41,7 +41,7 @@ public class UserData extends HttpServlet {
 
         String searchedPerson = request.getParameter("search");
 
-        Person searched = bank.personValidationbyId(searchedPerson);
+        Person searched = bank.personConfirmation(searchedPerson);
         
         response.sendRedirect("loggedin.jsp?report=" + searched);
                 

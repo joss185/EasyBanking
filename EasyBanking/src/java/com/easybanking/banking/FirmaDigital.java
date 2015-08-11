@@ -18,18 +18,16 @@ public class FirmaDigital {
      */
     public static void main(String[] args) {
 
-<<<<<<< HEAD
+
         Person p = new Person("123", "Carlos", "213", "qwdqwd", Calendar.getInstance(), "123");
         Bank easyBank = new Bank(1, "BAC", "Costa Rica", 800800800);
         BankAccount b = new BankAccount("123", 2, 1234, Calendar.getInstance(), Calendar.getInstance());
         System.out.println(""+p.getName() + " BANK "+easyBank.getName());
         
-=======
-        Person p = new Person("1032350", "Carlos", "213", "qwdqwd", Calendar.getInstance(), 8008000);
-        Bank easyBank = new Bank(1, "BAC", "Costa Rica", 800800800);
-        BankAccount b = new BankAccount(123, 2, 2500, Calendar.getInstance(), Calendar.getInstance());
+
+     
         p.getlistOfBankAccounts().add(b);
->>>>>>> origin/master
+
         easyBank.addPersons(p);
 
         System.out.println(p);

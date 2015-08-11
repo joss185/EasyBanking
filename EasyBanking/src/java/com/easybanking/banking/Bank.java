@@ -89,7 +89,7 @@ public class Bank {
 
         return null;
     }
-<<<<<<< HEAD
+
     public Person personConfirmation(String id){
     for(Person p: this.listOfPersons){
             if(p.getId().equals(id))
@@ -97,24 +97,10 @@ public class Bank {
         }
     return null;
     }
-=======
 
-    public Person personValidationbyId(String id) {
 
-        for (Person p : this.listOfPersons) {
 
-            if (p.getId().equals(id)) {
-                
-                return p;
 
-            }
-
-        }
-
-        return null;
-    }
-
->>>>>>> origin/master
     @Override
     public String toString() {
         return "Bank{" + "id=" + id + ", name=" + name + ", country=" + country + ", phone=" + phone + '}';

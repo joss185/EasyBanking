@@ -37,21 +37,20 @@ public class Login extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
-<<<<<<< HEAD
+
         Bank verifyUser = new Bank(1, "BAC", "Costa Rica", 800800800);
         Person p = new Person("123", "Carlos", "123", "qwdqwd", Calendar.getInstance(), "123");
         verifyUser.getListOfPersons().add(p);
-=======
+
         paramId = request.getParameter("id");
         paramPass = request.getParameter("password");
         UserData ud = new UserData();
         
-        Person p = new User("123", "Carlos", "123", "qwdqwd", Calendar.getInstance(), 123, 200, "TARDE");
-        Person p2 = new Person("1234", "Luis", "123", "qwdqwd", Calendar.getInstance(), 123);
+        Person d = new User("123", "Carlos", "123", "qwdqwd", Calendar.getInstance(), "123", 200, "TARDE");
+        Person p2 = new Person("1234", "Luis", "123", "qwdqwd", Calendar.getInstance(), "123");
         ud.bank.getListOfPersons().add(p);
         ud.bank.getListOfPersons().add(p2);
->>>>>>> origin/master
-        
+
         Person userDataFound = ud.bank.personValidation(paramId, paramPass);
 
         if (userDataFound instanceof User) {
@@ -70,11 +69,7 @@ public class Login extends HttpServlet {
             response.sendRedirect("index.jsp");
 
         }
-<<<<<<< HEAD
-        
-=======
 
->>>>>>> origin/master
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
