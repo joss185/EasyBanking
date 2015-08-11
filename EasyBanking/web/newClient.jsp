@@ -10,7 +10,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Nuevo cliente</title>
-        <form action="CreatePersons">
+        <form action="CreatePerson">
              Cedula              :<input type="text" name="Id"/><br/>
              Nombre              :<input type="text" name="Name"/><br/>
              Contraseña          :<input type="text" name="password" /><br/>

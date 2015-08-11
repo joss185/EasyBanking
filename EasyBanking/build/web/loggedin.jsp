@@ -82,7 +82,6 @@
         </style>
    </head>
    <div id="ebsearch">
-        <% Date d = new Date();%>
 
     <h1>Bienvenido,<br> <%= request.getParameter("userName")%>!</h1>
     Fecha de ingreso: <%=d%>
