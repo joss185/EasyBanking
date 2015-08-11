@@ -18,22 +18,14 @@ public class Withdraw extends Transaction{
     }
     
       public void withdrawAmount(Person person, BankAccount bankAccount){
-    
         for (BankAccount b: person.getlistOfBankAccounts()) {
-            
             if (b.equals(bankAccount)) {
-                
                 double amount = b.getAmount();
-                
                 if (amount >= getAmountOfTransaction()) {
-                    
                     double finalAmount = b.getAmount() - this.getAmountOfTransaction();
                     b.setAmount(finalAmount);
-                    
-                }else{
-                    
+                } else {
                     System.out.println("EXCEPTION");
-                
                 }
 
                 
