@@ -5,12 +5,8 @@
  */
 package com.easybanking.logic;
 
-import com.easybanking.banking.Bank;
-import com.easybanking.banking.BankAccount;
-import com.easybanking.banking.Person;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Calendar;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -20,7 +16,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Joss
  */
-public class CreateAccount extends HttpServlet {
+public class CreateUser extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,34 +30,18 @@ public class CreateAccount extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-       String paramIdentificaTion = request.getParameter("Identification");
-       Bank easyBank = new Bank(12345, "EasyBank", "Costa Rica", 2222222);
-       Person p = easyBank.personConfirmation(paramIdentificaTion);
-       
-       if (p != null) {
-            
-        String paramId= request.getParameter("Account");
-        String paramCurrency= request.getParameter("Currency");
-        int currency =0;
-        if(paramCurrency.equals("dolar")){
-        currency = 1;
-        }else if(paramCurrency.equals("colon")){
-            currency = 2;
-        }else if(paramCurrency.equals("euro")) {
-        currency = 3;
+        try (PrintWriter out = response.getWriter()) {
+            /* TODO output your page here. You may use following sample code. */
+            out.println("<!DOCTYPE html>");
+            out.println("<html>");
+            out.println("<head>");
+            out.println("<title>Servlet CreateUser</title>");            
+            out.println("</head>");
+            out.println("<body>");
+            out.println("<h1>Servlet CreateUser at " + request.getContextPath() + "</h1>");
+            out.println("</body>");
+            out.println("</html>");
         }
-        double paramAmount = Double.parseDouble(request.getParameter("Amount"));
-        //cambiar la fecha de expiración
-        
-        BankAccount account = new BankAccount(paramId,currency, paramAmount, Calendar.getInstance(), Calendar.getInstance());
-        p.getlistOfBankAccounts().add(account);
-        
-        } else {
-            response.sendError(23, "El usuario no se encuentra registrado");
-        }
-        
-        
-        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

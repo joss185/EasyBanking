@@ -106,6 +106,9 @@
         <form action="createAccount.jsp">
             <input type="submit" value="Crear cuenta" name="createAccount" />
         </form>
+        <form action="createUser.jsp">
+            <input type="submit" value="Agregar usuario" name="newUser" />
+        </form>
     </body>
 
 </html>
