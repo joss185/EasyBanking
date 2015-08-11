@@ -22,9 +22,9 @@ public class Deposit extends Transaction {
             if (b.equals(bankAccount)) {
                 double amount = b.getAmount();
                 double finalAmount = b.getAmount() + this.getAmountOfTransaction();
-                b.setAmountOfTransaction(finalAmount);
+                b.setAmount(finalAmount);
             } else {
-                System.out.println("Exception")
+                System.out.println("Exception");
             }
         }
         
