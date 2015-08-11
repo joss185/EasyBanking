@@ -1,6 +1,9 @@
 
 
-package EasyBanking;
+package com.easybanking.banking;
+
+import java.util.Calendar;
+
 
 /**
  *
