@@ -5,6 +5,7 @@
         <servlet-class>com.easybanking.logic.Login</servlet-class>
     </servlet>
     <servlet>
+<<<<<<< HEAD
         <servlet-name>CreatePerson</servlet-name>
         <servlet-class>com.easybanking.logic.CreatePersons</servlet-class>
     </servlet>
@@ -27,12 +28,17 @@
     <servlet>
         <servlet-name>CreateAccount</servlet-name>
         <servlet-class>com.easybanking.logic.CreateAccount</servlet-class>
+=======
+        <servlet-name>UserData</servlet-name>
+        <servlet-class>com.easybanking.logic.UserData</servlet-class>
+>>>>>>> origin/master
     </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
     </servlet-mapping>
     <servlet-mapping>
+<<<<<<< HEAD
         <servlet-name>CreatePerson</servlet-name>
         <url-pattern>/CreatePerson</url-pattern>
     </servlet-mapping>
@@ -55,6 +61,10 @@
     <servlet-mapping>
         <servlet-name>CreateAccount</servlet-name>
         <url-pattern>/CreateAccount</url-pattern>
+=======
+        <servlet-name>UserData</servlet-name>
+        <url-pattern>/UserData</url-pattern>
+>>>>>>> origin/master
     </servlet-mapping>
     <session-config>
         <session-timeout>

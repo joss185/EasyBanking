@@ -10,6 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<<<<<<< HEAD
         <title>Registrado como:</title>
     </head>
     <body>
@@ -29,3 +30,75 @@
         </form>
     </body>
 </html>
+=======
+        <title>EasyBanking!</title>
+        <style type="text/css">
+            #ebsearch{
+                background-color:#c3dfef;
+            }
+            #ebnewsearch{
+                float:center;
+                padding:20px;
+            }
+            .ebtextinput{
+                margin: 0;
+                padding: 5px 15px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size:14px;
+                border:1px solid #0076a3; border-right:0px;
+                border-top-left-radius: 5px 5px;
+                border-bottom-left-radius: 5px 5px;
+            }
+            .ebbutton {
+                margin: 0;
+                padding: 5px 15px;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size:14px;
+                outline: none;
+                cursor: pointer;
+                text-align: center;
+                text-decoration: none;
+                color: #ffffff;
+                border: solid 1px #0076a3; border-right:0px;
+                background: #0095cd;
+                background: -webkit-gradient(linear, left top, left bottom, from(#00adee), to(#0078a5));
+                background: -moz-linear-gradient(top,  #00adee,  #0078a5);
+                border-top-right-radius: 5px 5px;
+                border-bottom-right-radius: 5px 5px;
+            }
+            .ebbutton:hover {
+                text-decoration: none;
+                background: #007ead;
+                background: -webkit-gradient(linear, left top, left bottom, from(#0095cc), to(#00678e));
+                background: -moz-linear-gradient(top,  #0095cc,  #00678e);
+            }
+            /* Fixes submit button height problem in Firefox */
+            .ebbutton::-moz-focus-inner {
+                border: 0;
+            }
+            .ebclear{
+                clear:both;
+            }
+        </style>
+   </head>
+   <div id="ebsearch">
+        <% Date d = new Date();%>
+
+    <h1>Bienvenido,<br> <%= request.getParameter("userName")%>!</h1>
+    Fecha de ingreso: <%=d%>
+       
+   </div>
+<body>
+
+   <div id="ebsearch">
+       <form id="ebnewsearch" method="get" action="UserData">
+                <input type="text" class="ebtextinput" name="q" size="21" maxlength="120"><input type="submit" value="search" class="ebbutton">
+            </form>
+       <div class="ebclear"></div>
+            
+        </div>
+    
+    <div />
+</body>
+</html>
+>>>>>>> origin/master

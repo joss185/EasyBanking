@@ -18,46 +18,21 @@ public class FirmaDigital {
      */
     public static void main(String[] args) {
 
+<<<<<<< HEAD
         Person p = new Person("123", "Carlos", "213", "qwdqwd", Calendar.getInstance(), "123");
         Bank easyBank = new Bank(1, "BAC", "Costa Rica", 800800800);
         BankAccount b = new BankAccount("123", 2, 1234, Calendar.getInstance(), Calendar.getInstance());
         System.out.println(""+p.getName() + " BANK "+easyBank.getName());
         
+=======
+        Person p = new Person("1032350", "Carlos", "213", "qwdqwd", Calendar.getInstance(), 8008000);
+        Bank easyBank = new Bank(1, "BAC", "Costa Rica", 800800800);
+        BankAccount b = new BankAccount(123, 2, 2500, Calendar.getInstance(), Calendar.getInstance());
+        p.getlistOfBankAccounts().add(b);
+>>>>>>> origin/master
         easyBank.addPersons(p);
-        
-        try{
-        
-        for (Person p2: easyBank.getListOfPersons()) {
-            
-            if (p.equals(null)) {
-            
-                System.out.println("SII");
-                
-            }
-            
-            
-        }} catch(NullPointerException e){
-        
-            System.out.println("MAMON");
-        }
-        
-        easyBank.addPersons(p);
-        easyBank.getListOfPersons().add(p);
-        
-        Person p2 = easyBank.personValidation("123", "213");
-        
-        if (p2.equals(null)) {
-            
-            System.out.println("LOL");
-        }else{
-        
-            System.out.println(p2.getName());
-        }
-        p.getId();
-        p.getPassword();
-      
-        
-        System.out.println("" + p.getlistOfBankAccounts());
+
+        System.out.println(p);
 
     }
 
