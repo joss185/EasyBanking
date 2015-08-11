@@ -16,7 +16,7 @@ public class Natural extends Person{
     public Natural() {
     }
 
-    public Natural(String id, String name, String password, String direction, Calendar birthDate, int phone) {
+    public Natural(String id, String name, String password, String direction, Calendar birthDate, String phone) {
         super(id, name, password, direction, birthDate, phone);
     }
     

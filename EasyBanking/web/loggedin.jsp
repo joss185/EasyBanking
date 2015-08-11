@@ -20,5 +20,12 @@
         <br>
         Fecha de ingreso: <%=d %>
         
+        <h1>Presione en la transaccion que desea realizar</h1>
+        <form action="newClient.jsp">
+            <input type="submit" value="Agregar cliente" name="newClient" />    
+        </form>
+        <form action="createAccount.jsp">
+            <input type="submit" value="Crear cuenta" name="createAccount" />
+        </form>
     </body>
 </html>

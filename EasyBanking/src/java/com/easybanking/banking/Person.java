@@ -19,13 +19,13 @@ public class Person {
     private String password;
     private String direction;
     private Calendar birthDate;
-    private int phone;
+    private String phone;
     private ArrayList<BankAccount> listOfBankAccounts = new ArrayList<>();;
 
     public Person() {
     }
 
-    public Person(String id, String name, String password, String direction, Calendar birthDate, int phone) {
+    public Person(String id, String name, String password, String direction, Calendar birthDate, String phone) {
         this.id = id;
         this.name = name;
         this.password = password;
@@ -75,11 +75,11 @@ public class Person {
         this.birthDate = birthDate;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
     
@@ -90,7 +90,9 @@ public class Person {
     public void setListOfAccounts(ArrayList<BankAccount> listOfBankAccounts) {
         this.listOfBankAccounts = listOfBankAccounts;
     }
-
+    public void addAccount(BankAccount a) {
+         this.listOfBankAccounts.add(a);
+    }
     @Override
     public String toString() {
         return "Person{" + "id=" + id + ", name=" + name + ", password=" + password + ", direction=" + direction + ", birthDate=" + birthDate + ", phone=" + phone + ", listOfBankAccounts=" + listOfBankAccounts + '}';

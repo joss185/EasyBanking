@@ -18,9 +18,9 @@ public class FirmaDigital {
      */
     public static void main(String[] args) {
 
-        Person p = new Person("123", "Carlos", "213", "qwdqwd", Calendar.getInstance(), 123);
+        Person p = new Person("123", "Carlos", "213", "qwdqwd", Calendar.getInstance(), "123");
         Bank easyBank = new Bank(1, "BAC", "Costa Rica", 800800800);
-        BankAccount b = new BankAccount(123, 2, 1234, Calendar.getInstance(), Calendar.getInstance());
+        BankAccount b = new BankAccount("123", 2, 1234, Calendar.getInstance(), Calendar.getInstance());
         System.out.println(""+p.getName() + " BANK "+easyBank.getName());
         
         easyBank.addPersons(p);

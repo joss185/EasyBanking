@@ -6,9 +6,10 @@
 package com.easybanking.logic;
 
 import com.easybanking.banking.Bank;
+import com.easybanking.banking.BankAccount;
 import com.easybanking.banking.Person;
-import com.easybanking.banking.User;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Calendar;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -17,9 +18,9 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Soler
+ * @author Joss
  */
-public class Login extends HttpServlet {
+public class CreateAccount extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,23 +34,33 @@ public class Login extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        
-        String paramId = request.getParameter("id");
-        String paramPass = request.getParameter("password");
-
-        Bank verifyUser = new Bank(1, "BAC", "Costa Rica", 800800800);
-        Person p = new Person("123", "Carlos", "123", "qwdqwd", Calendar.getInstance(), "123");
-        verifyUser.getListOfPersons().add(p);
-        
-        Person userDataFound = verifyUser.personValidation(paramId, paramPass);
-
-        if (userDataFound != null) {
+       String paramIdentificaTion = request.getParameter("Identification");
+       Bank easyBank = new Bank(12345, "EasyBank", "Costa Rica", 2222222);
+       Person p = easyBank.personConfirmation(paramIdentificaTion);
+       
+       if (p != null) {
             
-            response.sendRedirect("loggedin.jsp?userName=" + userDataFound.getName());
-            
-        } else {
-            response.sendRedirect("error.jsp");
+        String paramId= request.getParameter("Account");
+        String paramCurrency= request.getParameter("Currency");
+        int currency =0;
+        if(paramCurrency.equals("Dolar")){
+        currency = 1;
+        }else if(paramCurrency.equals("Colon")){
+            currency = 2;
+        }else if(paramCurrency.equals("Euro")) {
+        currency = 3;
         }
+        double paramAmount = Double.parseDouble(request.getParameter("Amount"));
+        //cambiar la fecha de expiración
+        
+        BankAccount account = new BankAccount(paramId,currency, paramAmount, Calendar.getInstance(), Calendar.getInstance());
+        p.getlistOfBankAccounts().add(account);
+        
+        } else {
+            response.sendError(23, "El usuario no se encuentra registrado");
+        }
+        
+        
         
     }
 

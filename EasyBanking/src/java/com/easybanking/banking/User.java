@@ -25,7 +25,7 @@ public class User extends Person {
         this.workShift = workShift;
     }
 
-    public User(String id, String name, String password, String direction, Calendar birthDate, int phone, int salary, String workShift) {
+    public User(String id, String name, String password, String direction, Calendar birthDate, String phone, int salary, String workShift) {
         super(id, name, password, direction, birthDate, phone);
         this.salary = salary;
         this.workShift = workShift;

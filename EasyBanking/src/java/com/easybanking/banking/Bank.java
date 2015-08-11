@@ -91,7 +91,13 @@ public class Bank {
 
         return null;
     }
-
+    public Person personConfirmation(String id){
+    for(Person p: this.listOfPersons){
+            if(p.getId().equals(id))
+           return p; 
+        }
+    return null;
+    }
     @Override
     public String toString() {
         return "Bank{" + "id=" + id + ", name=" + name + ", country=" + country + ", phone=" + phone + '}';

@@ -4,9 +4,57 @@
         <servlet-name>Login</servlet-name>
         <servlet-class>com.easybanking.logic.Login</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CreatePerson</servlet-name>
+        <servlet-class>com.easybanking.logic.CreatePersons</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Menu</servlet-name>
+        <servlet-class>com.easybanking.logic.Menu</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreatePerons</servlet-name>
+        <servlet-class>com.easybanking.logic.CreatePerons</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>createNewLegal</servlet-name>
+        <servlet-class>com.easybanking.logic.createNewLegal</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>createAccount</servlet-name>
+        <servlet-class>com.easybanking.logic.CreateAccount</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>CreateAccount</servlet-name>
+        <servlet-class>com.easybanking.logic.CreateAccount</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreatePerson</servlet-name>
+        <url-pattern>/CreatePerson</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Menu</servlet-name>
+        <url-pattern>/Menu</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreatePerons</servlet-name>
+        <url-pattern>/CreatePerons</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>createNewLegal</servlet-name>
+        <url-pattern>/createNewLegal</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>createAccount</servlet-name>
+        <url-pattern>/createAccount</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CreateAccount</servlet-name>
+        <url-pattern>/CreateAccount</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -17,7 +17,7 @@ public class Manager extends User{
     
     private int extraSalary;
 
-    public Manager(String id, String name, String password, String direction, Calendar birthDate, int phone, int salary, String workShift,int extraSalary) {
+    public Manager(String id, String name, String password, String direction, Calendar birthDate, String phone, int salary, String workShift,int extraSalary) {
         super(id, name, password, direction, birthDate, phone, salary, workShift);
         this.extraSalary = extraSalary;
     }

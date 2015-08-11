@@ -14,7 +14,7 @@ import java.util.Calendar;
  */
 public class BankAccount {
  
-    private int id;
+    private String id;
     private int currency;
     private double amount;
     private ArrayList<Transaction> listOfTransactions = new ArrayList<>();;
@@ -24,7 +24,7 @@ public class BankAccount {
     public BankAccount() {
     }
 
-    public BankAccount(int id, int currency, int amount, Calendar registeredDate, Calendar expirationDate) {
+    public BankAccount(String id, int currency, double amount, Calendar registeredDate, Calendar expirationDate) {
         
         this.id = id;
         this.currency = currency;
@@ -33,11 +33,11 @@ public class BankAccount {
         this.expirationDate = expirationDate;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
