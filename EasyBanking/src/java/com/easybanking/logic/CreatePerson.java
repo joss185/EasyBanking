@@ -62,7 +62,7 @@ public class CreatePerson extends HttpServlet {
        }
      
         easyBank.getListOfPersons().add(client);
-       response.getWriter();
+       
         
         }
     }
