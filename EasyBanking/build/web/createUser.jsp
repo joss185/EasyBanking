@@ -14,14 +14,13 @@
     <body>
         <h1>Nuevo usuario</h1>
         
-         String direction, Calendar birthDate, String phone, int salary, String workShift
+        Ingrese los datos que se le solicitan:
         <form action="CreateUser">
              Cedula              :<input type="text" name="id"/><br/>
              Nombre              :<input type="text" name="name"/><br/>
              Primer apellido      :<input type="text" name="Lastname"/><br/>
              Segundo apellido     :<input type="text" name="Lastname"/><br/>
              E-mail              :<input type="text" name="email" value="@"/><br/>
-             Contraseña          :<input type="text" name="password" /><br/>
              Feacha de nacimiento:<input type="text" name="birthdate" value="00/00/0000"><br/>
              Direccion           :<input type="text" name="address"/><br/>
              Telefono            : <input type="text" name="phone" value="0000-00-00"/><br/>

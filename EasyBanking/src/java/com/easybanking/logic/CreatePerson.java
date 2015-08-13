@@ -46,18 +46,18 @@ public class CreatePerson extends HttpServlet {
         String paramBirtdate = request.getParameter("birthdate");
         String paramAddress = request.getParameter("address");
         String paramPhone = request.getParameter("phone");
-        String paramPass = request.getParameter("password");
+        //String paramPass = request.getParameter("password");
         String paramResposable = request.getParameter("responsable");
         
        Bank easyBank = new Bank(12345, "EasyBank", "Costa Rica", 2222222);
-       //corregir parametro de la 
-       String param= "";
+      
+  
       
        Person client = new Person();
+       String paramPass = client.encriptPassword();
        if (request.getParameter("clientType").equals("juridico")){
        client = new Legal(paramId, paramName,paramLastname,paramLastname02,paramEmail, paramPass,paramAddress,Calendar.getInstance(),paramPhone,paramResposable);
-       }
-       if (request.getParameter("clientType").equals("fisico")){
+       }else if (request.getParameter("clientType").equals("fisico")){
        client = new Natural(paramId, paramName,paramLastname,paramLastname02,paramEmail, paramPass,paramAddress,Calendar.getInstance(),paramPhone); 
        }
      

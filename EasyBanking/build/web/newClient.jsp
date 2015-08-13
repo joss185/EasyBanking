@@ -17,7 +17,7 @@
              Primer apellido      :<input type="text" name="Lastname"/><br/>
              Segundo apellido     :<input type="text" name="Lastname"/><br/>
              E-mail              :<input type="text" name="email" value="@"/><br/>
-             Contraseña          :<input type="text" name="password" /><br/>
+             
              Feacha de nacimiento:<input type="text" name="birthdate" value="00/00/0000"><br/>
              Direccion           :<input type="text" name="address"/><br/>
              Telefono          : <input type="text" name="phone" value="0000-00-00"/>

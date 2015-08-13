@@ -200,10 +200,12 @@ public class Person {
 
         return sb.toString();
     }
- public void encriptPassword(){
- String encriptPass = "andrea";
+    
+    // cambiar
+ public String encriptPassword(){
+ String encriptPass = "ANDREA";
  String encripted = DigestUtils.md5Hex(encriptPass);
- System.out.print(encripted);
+ return encripted;
  }
  public void sendEmail(){
   // Recipient's email ID needs to be mentioned.
