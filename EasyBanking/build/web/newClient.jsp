@@ -36,7 +36,7 @@
            <br/>
         </form>
         
-         <form action="createaccount.jsp">
+        <form action="createaccount1.jsp">
                  <input type="submit" value="Crear cuenta" name="createaccount" />          
     </form>
     </head>

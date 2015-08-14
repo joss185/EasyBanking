@@ -15,6 +15,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -38,7 +39,7 @@ public class CreateAccount extends HttpServlet {
        Bank easyBank = new Bank(12345, "EasyBank", "Costa Rica", 2222222);
        Person p = easyBank.personConfirmation(paramIdentificaTion);
        
-       if (p != null) {
+       //if (p != null) {
             
         String paramId= request.getParameter("Account");
         String paramCurrency= request.getParameter("Currency");
@@ -56,9 +57,9 @@ public class CreateAccount extends HttpServlet {
         BankAccount account = new BankAccount(paramId,currency, paramAmount, Calendar.getInstance(), Calendar.getInstance());
         p.getlistOfBankAccounts().add(account);
         
-        } else {
-            response.sendError(23, "El usuario no se encuentra registrado");
-        }
+       // } else {
+           
+       // }
         
         
         

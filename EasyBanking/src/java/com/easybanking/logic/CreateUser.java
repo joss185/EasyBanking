@@ -50,10 +50,10 @@ public class CreateUser extends HttpServlet {
         
         
        Bank easyBank = new Bank(12345, "EasyBank", "Costa Rica", 2222222);
-       //corregir parametro de la 
+       
       Person person = new Person();
        String paramPass = person.encriptPassword(paramName);
-    // String paramPass =  person.encriptPassword();
+    
        Person user= new User(paramId, paramName,paramLastname,paramLastname02,paramEmail, paramPass,paramAddress,Calendar.getInstance(),paramPhone,paramSalary,paramworkShift);
        easyBank.getListOfPersons().add(user);
        System.out.print(user);

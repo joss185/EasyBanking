@@ -4,7 +4,7 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 import javax.servlet.jsp.*;
 
-public final class newclient_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class createaccount1_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -48,39 +48,24 @@ public final class newclient_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("<html>\n");
       out.write("    <head>\n");
       out.write("        <meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">\n");
-      out.write("        <title>Nuevo cliente</title>\n");
-      out.write("        <h1>Nuevo cliente </h1>\n");
-      out.write("        <form action=\"CreatePerson\">\n");
-      out.write("             Cedula              :<input type=\"text\" name=\"id\"/><br/>\n");
-      out.write("             Nombre              :<input type=\"text\" name=\"name\"/><br/>\n");
-      out.write("             Primer apellido      :<input type=\"text\" name=\"lastname\"/><br/>\n");
-      out.write("             Segundo apellido     :<input type=\"text\" name=\"lastname02\"/><br/>\n");
-      out.write("             E-mail              :<input type=\"text\" name=\"email\" value=\"@\"/><br/>\n");
-      out.write("             Feacha de nacimiento:<input type=\"text\" name=\"birthdate\" value=\"00/00/0000\"><br/>\n");
-      out.write("             Direccion           :<input type=\"text\" name=\"address\"/><br/>\n");
-      out.write("             Telefono          : <input type=\"text\" name=\"phone\" value=\"0000-00-00\"/>\n");
-      out.write("             <br/>\n");
-      out.write("             \n");
-      out.write("             Tipo de cliente: <select name=\"clientType\">\n");
-      out.write("                 <option value=\"juridico\">Jurídico</option>\n");
-      out.write("                 <option value=\"fisico\">Físico</option>\n");
-      out.write("             </select>\n");
-      out.write("             <br/>\n");
-      out.write("         \n");
-      out.write("             Responsable          : <input type=\"text\" name=\"responsable\"/>\n");
-      out.write("            \n");
-      out.write("             \n");
-      out.write("         <input type=\"submit\" value=\"Agregar\" name=\"newClient\" />\n");
-      out.write("          <br/>\n");
-      out.write("           <br/>\n");
-      out.write("        </form>\n");
-      out.write("        \n");
-      out.write("        <form action=\"createaccount1.jsp\">\n");
-      out.write("                 <input type=\"submit\" value=\"Crear cuenta\" name=\"createaccount\" />          \n");
-      out.write("    </form>\n");
+      out.write("        <title>Nueva Cuenta</title>\n");
       out.write("    </head>\n");
+      out.write("    \n");
       out.write("    <body>\n");
+      out.write("        <form action=\"CreateAccount\">\n");
       out.write("        \n");
+      out.write("        <h1>Ingrese la información que se le solicita</h1>\n");
+      out.write("        Numero de cedula:<input type=\"text\" name=\"Identification\"/><br/>\n");
+      out.write("        Numero de cuenta:<input type=\"text\" name=\"Account\"/><br/>\n");
+      out.write("        Moneda          : <select name=\"Currency\"><br/>\n");
+      out.write("            <option value=\"colon\">Colon</option>\n");
+      out.write("            <option value=\"dolar\">Dolar</option>\n");
+      out.write("            <option value=\"euro\">Euro</option>\n");
+      out.write("       </select><br/>\n");
+      out.write("       Monto a depositar:<input type=\"number\" name=\"Amount\"/><br/>\n");
+      out.write("       <input type=\"submit\" value=\"Crear cuenta\" name=\"newAccount\" />\n");
+      out.write("       <br/>\n");
+      out.write("       <form/>\n");
       out.write("    </body>\n");
       out.write("</html>\n");
     } catch (Throwable t) {
