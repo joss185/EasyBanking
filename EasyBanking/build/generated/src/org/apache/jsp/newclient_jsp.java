@@ -73,6 +73,7 @@ public final class newclient_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("         <input type=\"submit\" value=\"Agregar\" name=\"newClient\" />\n");
       out.write("          <br/>\n");
       out.write("           <br/>\n");
+      out.write("           \n");
       out.write("         <form action=\"createaccount.jsp\">\n");
       out.write("                 <input type=\"submit\" value=\"Crear cuenta\" name=\"createaccount\" />\n");
       out.write("        \n");

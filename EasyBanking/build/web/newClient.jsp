@@ -34,10 +34,10 @@
          <input type="submit" value="Agregar" name="newClient" />
           <br/>
            <br/>
-         <form action="createaccount.jsp">
-                 <input type="submit" value="Crear cuenta" name="createaccount" />
+        </form>
         
-         
+         <form action="createaccount.jsp">
+                 <input type="submit" value="Crear cuenta" name="createaccount" />          
     </form>
     </head>
     <body>
