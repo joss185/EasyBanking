@@ -35,12 +35,11 @@ public class CreatePerson extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            response.setContentType("text/html;charset=UTF-8");
+        
         String paramId = request.getParameter("id");
         String paramName = request.getParameter("name");
-        String paramLastname= request.getParameter("Lastname");
-        String paramLastname02= request.getParameter("Lastname02");
+        String paramLastname= request.getParameter("lastname");
+        String paramLastname02= request.getParameter("lastname02");
         String paramEmail= request.getParameter("email");
         //Investigar como recibir este parametro
         String paramBirtdate = request.getParameter("birthdate");
@@ -65,7 +64,7 @@ public class CreatePerson extends HttpServlet {
        
         
         }
-    }
+    
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
