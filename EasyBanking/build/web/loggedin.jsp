@@ -103,10 +103,7 @@
         <form action="newclient.jsp">
             <input type="submit" value="Agregar cliente" name="newClient" />    
         </form>
-        <form action="createaccount.jsp">
-            <input type="submit" value="Crear cuenta" name="createAcccount" />
-        </form>
-        
+
         <form action="createuser.jsp">
             <input type="submit" value="Agregar usuario" name="newUser" />
         </form>

@@ -29,8 +29,14 @@
              <br/>
          
              Responsable          : <input type="text" name="responsable"/>
-             <br/>
+            
+             
          <input type="submit" value="Agregar" name="newClient" />
+          <br/>
+           <br/>
+         <form action="createaccount.jsp">
+                 <input type="submit" value="Crear cuenta" name="createaccount" />
+        
          
     </form>
     </head>

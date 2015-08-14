@@ -28,6 +28,8 @@
              Horario             :<input type="text" name="workShift" value="" /><br/>
              <input type="submit" value="Agregar" name="newUser" />   
              
+             
+             
         </form>
     </body>
 </html>
