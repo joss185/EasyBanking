@@ -58,8 +58,8 @@ public final class createaccount_jsp extends org.apache.jasper.runtime.HttpJspBa
       out.write("        Numero de cedula:<input type=\"text\" name=\"Identification\"/><br/>\n");
       out.write("        Numero de cuenta:<input type=\"text\" name=\"Account\"/><br/>\n");
       out.write("        Moneda          : <select name=\"Currency\"><br/>\n");
-      out.write("            <option value=\"dolar\">Dolar</option>\n");
       out.write("            <option value=\"colon\">Colon</option>\n");
+      out.write("            <option value=\"dolar\">Dolar</option>\n");
       out.write("            <option value=\"euro\">Euro</option>\n");
       out.write("       </select><br/>\n");
       out.write("       Monto a depositar:<input type=\"number\" name=\"Amount\"/><br/>\n");

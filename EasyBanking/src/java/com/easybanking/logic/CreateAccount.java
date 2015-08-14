@@ -44,9 +44,9 @@ public class CreateAccount extends HttpServlet {
         String paramCurrency= request.getParameter("Currency");
         int currency =0;
         if(paramCurrency.equals("dolar")){
-        currency = 1;
+        currency = 2;
         }else if(paramCurrency.equals("colon")){
-            currency = 2;
+            currency = 1;
         }else if(paramCurrency.equals("euro")) {
         currency = 3;
         }

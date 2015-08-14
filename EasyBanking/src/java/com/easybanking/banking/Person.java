@@ -202,8 +202,7 @@ public class Person {
     }
     
     // cambiar
- public String encriptPassword(){
- String encriptPass = "ANDREA";
+ public String encriptPassword(String encriptPass){
  String encripted = DigestUtils.md5Hex(encriptPass);
  return encripted;
  }

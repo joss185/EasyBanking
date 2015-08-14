@@ -44,7 +44,7 @@ public class CreateUser extends HttpServlet {
         String paramBirtdate = request.getParameter("birthdate");
         String paramAddress = request.getParameter("address");
         String paramPhone = request.getParameter("phone");
-        String paramPass = request.getParameter("password");
+       
         int paramSalary = Integer.parseInt(request.getParameter("salary"));
         String paramworkShift = request.getParameter("workShift");
         
@@ -52,6 +52,7 @@ public class CreateUser extends HttpServlet {
        Bank easyBank = new Bank(12345, "EasyBank", "Costa Rica", 2222222);
        //corregir parametro de la 
       Person person = new Person();
+       String paramPass = person.encriptPassword(paramName);
     // String paramPass =  person.encriptPassword();
        Person user= new User(paramId, paramName,paramLastname,paramLastname02,paramEmail, paramPass,paramAddress,Calendar.getInstance(),paramPhone,paramSalary,paramworkShift);
        easyBank.getListOfPersons().add(user);

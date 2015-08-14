@@ -19,8 +19,8 @@
         Numero de cedula:<input type="text" name="Identification"/><br/>
         Numero de cuenta:<input type="text" name="Account"/><br/>
         Moneda          : <select name="Currency"><br/>
-            <option value="dolar">Dolar</option>
             <option value="colon">Colon</option>
+            <option value="dolar">Dolar</option>
             <option value="euro">Euro</option>
        </select><br/>
        Monto a depositar:<input type="number" name="Amount"/><br/>

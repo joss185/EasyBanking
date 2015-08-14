@@ -50,10 +50,10 @@ public class CreatePerson extends HttpServlet {
         
        Bank easyBank = new Bank(12345, "EasyBank", "Costa Rica", 2222222);
       
-  
+      
       
        Person client = new Person();
-       String paramPass = client.encriptPassword();
+       String paramPass = client.encriptPassword(paramName);
        if (request.getParameter("clientType").equals("juridico")){
        client = new Legal(paramId, paramName,paramLastname,paramLastname02,paramEmail, paramPass,paramAddress,Calendar.getInstance(),paramPhone,paramResposable);
        }else if (request.getParameter("clientType").equals("fisico")){
